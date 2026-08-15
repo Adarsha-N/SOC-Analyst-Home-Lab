@@ -1,0 +1,36 @@
+# VMware
+*.vmdk
+*.vmem
+*.vmsn
+*.vmss
+*.iso
+*.ova
+*.ovf
+
+# Secrets
+.env
+*.key
+*.pem
+id_rsa
+id_ed25519
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs
+*.log
+
+# Packet captures
+*.pcap
+*.pcapng
+
+# Temporary files
+*.tmp
+*.swp
+
+# Operating system files
+.DS_Store
+Thumbs.db
