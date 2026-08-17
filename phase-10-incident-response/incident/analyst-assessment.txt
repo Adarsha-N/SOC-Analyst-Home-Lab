@@ -1,0 +1,44 @@
+=== SOC ANALYST ASSESSMENT ===
+
+Incident ID: SOC-2026-001
+
+Alert:
+Multiple failed SSH authentication attempts were observed for
+the user account "adhi" from source host 10.10.20.20.
+
+Evidence:
+- 3 failed SSH password attempts were observed.
+- The attempts originated from 10.10.20.20.
+- Previous successful SSH authentications from the same source were observed.
+- The SSH session closed during pre-authentication.
+- Fail2ban is active with an sshd jail.
+- No currently banned IPs were reported.
+- UFW is active with a default deny incoming policy.
+- SSH port 22 is intentionally exposed in the lab.
+
+Assessment:
+The observed activity is suspicious but does not provide sufficient
+evidence of successful unauthorized access.
+
+Severity:
+LOW
+
+Initial Classification:
+Authentication Anomaly / Possible Brute-Force Activity
+
+Containment Decision:
+No IP block will be performed at this stage because the source IP
+is part of the controlled SOC lab environment and successful
+unauthorized access has not been established.
+
+Recommended Actions:
+1. Continue monitoring SSH authentication events.
+2. Review Fail2ban activity.
+3. Review successful logins following failed attempts.
+4. Restrict SSH exposure in a production environment.
+5. Prefer SSH keys over password authentication.
+6. Escalate severity if repeated failures or successful suspicious
+   authentication are observed.
+
+Current Status:
+Monitoring

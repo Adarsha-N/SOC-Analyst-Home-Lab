@@ -1,0 +1,29 @@
+=== INCIDENT RESPONSE ACTIONS ===
+
+Incident ID: SOC-2026-001
+
+Detection:
+SSH authentication anomaly detected through Linux authentication logs.
+
+Triage:
+Reviewed failed authentication, successful authentication,
+SSH session closure, endpoint state, firewall status, and Fail2ban.
+
+Containment:
+No source IP was blocked because 10.10.20.20 is a controlled
+lab host and unauthorized compromise was not established.
+
+Eradication:
+No malware or unauthorized persistence was identified from the
+evidence collected during this phase.
+
+Recovery:
+No service restoration was required.
+
+Monitoring:
+SSH authentication activity will continue to be monitored.
+
+Lessons Learned:
+- Authentication failures should be correlated with successful logins.
+- Firewall and Fail2ban status should be checked during SSH investigations.
+- Evidence should be preserved and hashed before response actions.

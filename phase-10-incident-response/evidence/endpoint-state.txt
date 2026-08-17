@@ -1,0 +1,94 @@
+== HOST ===
+adhi-VMware-Virtual-Platform
+
+=== DATE ===
+Mon Aug 17 06:45:28 PM IST 2026
+
+=== IP ADDRESSES ===
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+docker0          DOWN           172.17.0.1/16 
+br-cfbdc4e65815  UP             172.18.0.1/16 fe80::30a2:ceff:fe04:3c2f/64 
+veth3c6e1ec@if2  UP             fe80::7ca4:b1ff:fe4c:e54e/64 
+veth9cc1416@if2  UP             fe80::7021:5dff:feab:5765/64 
+vethe337fdf@if2  UP             fe80::14ed:93ff:fe30:4305/64 
+ens33            UP             10.16.9.138/24 2409:40f2:301:fe00:20c:29ff:fe65:925e/64 fe80::20c:29ff:fe65:925e/64 
+ens37            UP             10.10.20.10/24 fe80::953a:c964:4da6:19c9/64 
+
+=== ROUTING ===
+default via 10.16.9.242 dev ens33 proto dhcp src 10.16.9.138 metric 101 
+10.10.20.0/24 dev ens37 proto kernel scope link src 10.10.20.10 metric 100 
+10.16.9.0/24 dev ens33 proto kernel scope link src 10.16.9.138 metric 101 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+172.18.0.0/16 dev br-cfbdc4e65815 proto kernel scope link src 172.18.0.1 
+
+=== ACTIVE CONNECTIONS ===
+Netid State    Recv-Q Send-Q                                 Local Address:Port           Peer Address:PortProcess                                                                         
+udp   UNCONN   0      0                                          127.0.0.1:323                 0.0.0.0:*    users:(("chronyd",pid=1150,fd=4))                                              
+udp   UNCONN   0      0                                            0.0.0.0:5353                0.0.0.0:*    users:(("avahi-daemon",pid=1034,fd=12))                                        
+udp   UNCONN   0      0                                         127.0.0.54:53                  0.0.0.0:*    users:(("systemd-resolve",pid=522,fd=18))                                      
+udp   UNCONN   0      0                                      127.0.0.53%lo:53                  0.0.0.0:*    users:(("systemd-resolve",pid=522,fd=16))                                      
+udp   ESTAB    0      0                                  10.16.9.138%ens33:68              10.16.9.242:67   users:(("NetworkManager",pid=1154,fd=29))                                      
+udp   UNCONN   0      0                                              [::1]:323                    [::]:*    users:(("chronyd",pid=1150,fd=5))                                              
+udp   UNCONN   0      0                                               [::]:5353                   [::]:*    users:(("avahi-daemon",pid=1034,fd=13))                                        
+tcp   LISTEN   0      4096                                      127.0.0.54:53                  0.0.0.0:*    users:(("systemd-resolve",pid=522,fd=19))                                      
+tcp   LISTEN   0      4096                                       127.0.0.1:631                 0.0.0.0:*    users:(("cupsd",pid=1386,fd=7))                                                
+tcp   LISTEN   0      4096                                         0.0.0.0:22                  0.0.0.0:*    users:(("sshd",pid=1427,fd=3),("systemd",pid=1,fd=449))                        
+tcp   LISTEN   0      511                                          0.0.0.0:80                  0.0.0.0:*    users:(("nginx",pid=1482,fd=5),("nginx",pid=1481,fd=5),("nginx",pid=1479,fd=5))
+tcp   LISTEN   0      4096                                         0.0.0.0:9100                0.0.0.0:*    users:(("docker-proxy",pid=2105,fd=7))                                         
+tcp   LISTEN   0      4096                                         0.0.0.0:9090                0.0.0.0:*    users:(("docker-proxy",pid=2077,fd=7))                                         
+tcp   LISTEN   0      4096                                         0.0.0.0:3000                0.0.0.0:*    users:(("docker-proxy",pid=2157,fd=7))                                         
+tcp   LISTEN   0      4096                                   127.0.0.53%lo:53                  0.0.0.0:*    users:(("systemd-resolve",pid=522,fd=17))                                      
+tcp   LISTEN   0      4096                                       127.0.0.1:44331               0.0.0.0:*    users:(("containerd",pid=1423,fd=14))                                          
+tcp   LISTEN   0      4096                                           [::1]:631                    [::]:*    users:(("cupsd",pid=1386,fd=6))                                                
+tcp   LISTEN   0      4096                                            [::]:22                     [::]:*    users:(("sshd",pid=1427,fd=4),("systemd",pid=1,fd=450))                        
+tcp   LISTEN   0      511                                             [::]:80                     [::]:*    users:(("nginx",pid=1482,fd=6),("nginx",pid=1481,fd=6),("nginx",pid=1479,fd=6))
+tcp   LISTEN   0      4096                                            [::]:9100                   [::]:*    users:(("docker-proxy",pid=2110,fd=7))                                         
+tcp   LISTEN   0      4096                                            [::]:9090                   [::]:*    users:(("docker-proxy",pid=2083,fd=7))                                         
+tcp   LISTEN   0      4096                                            [::]:3000                   [::]:*    users:(("docker-proxy",pid=2164,fd=7))                                         
+tcp   LAST-ACK 0      1      [2409:40f2:301:fe00:20c:29ff:fe65:925e]%ens33:56438 [2620:2d:4002:1::196]:80                                                                                  
+
+=== RUNNING SERVICES ===
+  UNIT                          LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service       loaded active running Accounts Service
+  auditd.service                loaded active running Security Audit Logging Service
+  avahi-daemon.service          loaded active running Avahi mDNS/DNS-SD Stack
+  chrony.service                loaded active running chrony, an NTP client/server
+  colord.service                loaded active running Manage, Install and Generate Color Profiles
+  containerd.service            loaded active running containerd container runtime
+  cron.service                  loaded active running Regular background program processing daemon
+  cups-browsed.service          loaded active running Make remote CUPS printers available locally
+  cups.service                  loaded active running CUPS Scheduler
+  dbus.service                  loaded active running D-Bus System Message Bus
+  docker.service                loaded active running Docker Application Container Engine
+  fail2ban.service              loaded active running Fail2Ban Service
+  fwupd.service                 loaded active running Firmware update daemon
+  gdm.service                   loaded active running GNOME Display Manager
+  ModemManager.service          loaded active running Modem Manager
+  networkd-dispatcher.service   loaded active running Dispatcher daemon for systemd-networkd
+  NetworkManager.service        loaded active running Network Manager
+  nginx.service                 loaded active running A high performance web server and a reverse proxy server
+  open-vm-tools.service         loaded active running Service for virtual machines hosted on VMware
+  polkit.service                loaded active running Authorization Manager
+  power-profiles-daemon.service loaded active running Power Profiles daemon
+  rsyslog.service               loaded active running System Logging Service
+  rtkit-daemon.service          loaded active running RealtimeKit Scheduling Policy Service
+  snapd.service                 loaded active running Snap Daemon
+  ssh.service                   loaded active running OpenBSD Secure Shell server
+  switcheroo-control.service    loaded active running Switcheroo Control Proxy service
+  systemd-journald.service      loaded active running Journal Service
+  systemd-logind.service        loaded active running User Login Management
+  systemd-oomd.service          loaded active running Userspace Out-Of-Memory (OOM) Killer
+  systemd-resolved.service      loaded active running Network Name Resolution
+  systemd-udevd.service         loaded active running Rule-based Manager for Device Events and Files
+  udisks2.service               loaded active running Disk Manager
+  unattended-upgrades.service   loaded active running Unattended Upgrades Shutdown
+  upower.service                loaded active running Daemon for power management
+  user@1000.service             loaded active running User Manager for UID 1000
+  vgauth.service                loaded active running Authentication service for virtual machines hosted on VMware
+  wpa_supplicant.service        loaded active running WPA supplicant
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+37 loaded units listed

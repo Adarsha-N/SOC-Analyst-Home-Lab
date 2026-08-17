@@ -1,0 +1,65 @@
+==========================================
+SOC INCIDENT TIMELINE
+Incident: SOC-2026-001
+==========================================
+
+[1] SSH SERVICE
+
+SSH service was confirmed active.
+
+SSH listener:
+0.0.0.0:22
+[::]:22
+
+[2] FAILED SSH AUTHENTICATION
+
+2026-08-16T17:39:15.385579+05:30
+Failed password for adhi from 10.10.20.20 port 37742 ssh2
+
+2026-08-16T17:39:33.402779+05:30
+Failed password for adhi from 10.10.20.20 port 37742 ssh2
+
+2026-08-16T17:39:39.199076+05:30
+Failed password for adhi from 10.10.20.20 port 37742 ssh2
+
+[3] SUCCESSFUL SSH AUTHENTICATION
+
+2026-08-16T15:44:54.263983+05:30
+Accepted password for adhi from 10.10.20.20 port 59312 ssh2
+
+2026-08-16T16:02:11.524896+05:30
+Accepted password for adhi from 10.10.20.20 port 44392 ssh2
+
+2026-08-16T16:07:26.007173+05:30
+Accepted password for adhi from 10.10.20.20 port 46690 ssh2
+
+[4] SSH SESSION CLOSURE
+
+2026-08-16T17:39:39.222884+05:30
+Connection closed by authenticating user adhi 10.10.20.20
+port 37742 [preauth]
+
+[5] SECURITY CONTROLS
+
+UFW:
+Active
+Default incoming policy: deny
+
+Fail2ban:
+Active
+SSH jail: sshd
+Currently banned IPs: 0
+
+[6] SOC ASSESSMENT
+
+Severity: LOW
+
+Classification:
+Authentication Anomaly / Possible Brute-Force Activity
+
+Containment:
+No IP block performed because the source is part of the
+controlled SOC laboratory environment.
+
+Current Status:
+Monitoring

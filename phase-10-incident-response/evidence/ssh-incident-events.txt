@@ -1,0 +1,16 @@
+=== SSH INCIDENT EVENTS ===
+
+--- FAILED AUTHENTICATION ---
+2026-08-16T17:39:15.385579+05:30 adhi-VMware-Virtual-Platform sshd-session[4712]: Failed password for adhi from 10.10.20.20 port 37742 ssh2
+2026-08-16T17:39:33.402779+05:30 adhi-VMware-Virtual-Platform sshd-session[4712]: Failed password for adhi from 10.10.20.20 port 37742 ssh2
+2026-08-16T17:39:39.199076+05:30 adhi-VMware-Virtual-Platform sshd-session[4712]: Failed password for adhi from 10.10.20.20 port 37742 ssh2
+
+--- SUCCESSFUL AUTHENTICATION ---
+2026-08-16T15:44:54.263983+05:30 adhi-VMware-Virtual-Platform sshd-session[6419]: Accepted password for adhi from 10.10.20.20 port 59312 ssh2
+2026-08-16T16:02:11.524896+05:30 adhi-VMware-Virtual-Platform sshd-session[6647]: Accepted password for adhi from 10.10.20.20 port 44392 ssh2
+2026-08-16T16:07:26.007173+05:30 adhi-VMware-Virtual-Platform sshd-session[4608]: Accepted password for adhi from 10.10.20.20 port 46690 ssh2
+
+--- SSH SESSION CLOSURES ---
+2026-08-16T15:48:50.284440+05:30 adhi-VMware-Virtual-Platform sshd-session[6478]: Disconnected from user adhi 10.10.20.20 port 59312
+2026-08-16T16:28:42.151680+05:30 adhi-VMware-Virtual-Platform sshd-session[4667]: Disconnected from user adhi 10.10.20.20 port 46690
+2026-08-16T17:39:39.222884+05:30 adhi-VMware-Virtual-Platform sshd-session[4712]: Connection closed by authenticating user adhi 10.10.20.20 port 37742 [preauth]

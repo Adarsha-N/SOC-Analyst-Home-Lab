@@ -1,0 +1,9 @@
+Incident ID: SOC-2026-001
+Incident Type: SSH Authentication Anomaly
+Severity: Low
+Status: Monitoring
+Detection Source: Linux authentication logs
+Affected Host: 10.10.20.10
+Source Host: 10.10.20.20
+Analyst: Adarsha
+Environment: SOC Analyst Home Lab
